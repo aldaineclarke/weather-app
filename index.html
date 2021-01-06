@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <title>Weather App</title>
+</head>
+<body>
+    
+      <main>
+        <video id="vid-bg" src="cloudy-vid.mp4" muted loop autoplay></video>
+        <div class="overlay"></div>
+        <section class="weather-root">
+            <div class="container pt-3">
+              <div class="row mb-5 justify-content-end">
+                <div class="col-md-5">
+                  <form class="d-flex ml-auto" name="searchLocation">
+                    <input class="form-control me-1" type="search" placeholder="Search Location" aria-label="Search" name="location">
+                    <button class="btn btn-outline-success btn-sm" type="submit">Search</button>
+                  </form>
+                </div>
+              
+                
+              </div>
+              <div class="welcome row align-center text-center">
+                <div class="col-md">
+                  <h1 class="display-3 text-center" >Welcome To My WeatherApp</h1>
+                  <h6 class="mt-5">Use the search box to search for the location you want to check the weather for.</h6>
+                </div>
+
+              </div>
+                <div class="row weather-data">
+                    <div class="col-md mt-2  border">
+                        <div class="location-info">
+                            <div class="loca--meta">
+                                <h4 id="name" class="loca"></h4>
+                                <p id="country" class="fw-bold loca strong"></p>
+                                <div class="locat-lat-lon">
+                                    <p><strong>latitude: </strong><span id="lat" class="loca"></span></p>
+                                    <p id="lon"><strong>longitude: </strong><span id="lon" class="loca"></span></p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-around">
+                              <div><h4 class="temp display-4 strong"><span></span><span>°C</span></h4>
+                                <p class="p-0 m-0"><strong>Feelslike</strong> <span class="feel">  <span></span> <span>°C</span>  </span></p>
+                              </div>
+                              <div>
+                                <img id="weather-icon">
+                                <h5 id="weather_description"></h5>
+
+                              </div>
+                            </div>
+                            
+                            
+        
+                        </div>
+                    </div>
+                    <div class="col-md mt-2  border">
+                        <div class="weather-info">
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Weather Details</th>
+                                    <th scope="col">Data</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Cloud Cover</td>
+                                    <td class="data-val" id="cloudcover"></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Humidity</td>
+                                    <td class="data-val " id="humidity" ></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Precipitation</td>
+                                    <td class="data-val" id="precip" ></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Pressure</td>
+                                    <td class="data-val"  id="pressure" ></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Wind Speed</td>
+                                    <td class="data-val" id="wind_speed" ></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Wind Direction</td>
+                                    <td class="data-val" id="wind_dir" ></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Visibility</td>
+                                    <td class="data-val"  id="visibility" ></td>
+                                  </tr>
+                                  <tr>
+                                    <td>DayTime</td>
+                                    <td class="data-val"  id="is_day"></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
+                            
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
